@@ -2,29 +2,26 @@ import time
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import substring
 
-# === Setup ===
 spark = SparkSession.builder.appName("TeraSort").getOrCreate()
 sc = spark.sparkContext
 sc.setLogLevel("INFO")
 
 
-# === Known Config ===
-NUM_WORKERS = 6  # Adjust manually based on your setup
+NUM_WORKERS = 6  # Adjust manually based on setup
 EXECUTOR_MEMORY_MB = 1024  # Verified from Spark UI
 EST_BYTES_PER_ROW = 100    # TeraGen row is exactly 100 bytes
 
-# === Benchmark Start ===
 start_time = time.time()
 
-# 1. Read input from HDFS
+# read teragen output data from hdfs
 df = spark.read.text("hdfs://namenode:9000/input/")
 input_count = df.count()
 input_bytes = input_count * EST_BYTES_PER_ROW
 
-# 2. Sort the data
+# implement terasort
 sorted_df = df.orderBy(substring("value", 1, 10))
 
-# 3. Write output to HDFS
+#write the sorted data to HDFS
 sorted_df.write.mode("overwrite").text("hdfs://namenode:9000/output/")
 output_count = sorted_df.count()
 output_bytes = output_count * EST_BYTES_PER_ROW
@@ -32,7 +29,7 @@ output_bytes = output_count * EST_BYTES_PER_ROW
 end_time = time.time()
 wall_time = end_time - start_time
 
-# === Metric Calculations ===
+# metrics
 
 shuffle_bytes = input_bytes + output_bytes
 shuffle_throughput_MBps = shuffle_bytes / wall_time / (1024 ** 2)
@@ -40,11 +37,11 @@ shuffle_throughput_MBps = shuffle_bytes / wall_time / (1024 ** 2)
 agg_resource_util_ms = wall_time * 1000 * NUM_WORKERS
 io_throughput_MBps_per_worker = (input_bytes + output_bytes) / (wall_time * NUM_WORKERS * 1024 ** 2)
 
-# PySpark does not expose CPU time or killed tasks
 cpu_efficiency = "N/A"
 killed_tasks_per_worker = "N/A"
 
-# === Print Metrics ===
+
+
 print("========== Spark TeraSort Benchmark ==========")
 print(f"Number of Workers: {NUM_WORKERS}")
 print(f"Wall Time: {wall_time:.2f} seconds")
