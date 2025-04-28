@@ -1,0 +1,62 @@
+exouser@node-master:~$ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+ teragen 10000000 /teragen/input
+2025-04-22 11:53:14,191 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at node-master/10.3.34.73:8032
+2025-04-22 11:53:14,794 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/exouser/.staging/job_1745333783354_0001
+2025-04-22 11:53:15,148 INFO terasort.TeraGen: Generating 10000000 using 2
+2025-04-22 11:53:15,148 INFO mapreduce.JobSubmitter: number of splits:2
+2025-04-22 11:53:16,183 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1745333783354_0001
+2025-04-22 11:53:16,312 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-22 11:53:16,321 INFO conf.Configuration: resource-types.xml not found
+2025-04-22 11:53:16,330 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-22 11:53:16,401 INFO impl.YarnClientImpl: Submitted application application_1745333783354_0001
+2025-04-22 11:53:16,409 INFO mapreduce.Job: The url to track the job: http://node-master:8088/proxy/application_1745333783354_0001/
+2025-04-22 11:53:16,409 INFO mapreduce.Job: Running job: job_1745333783354_0001
+2025-04-22 11:53:29,695 INFO mapreduce.Job: map 0% reduce 0%
+2025-04-22 11:53:40,153 INFO mapreduce.Job: map 26% reduce 0%
+2025-04-22 11:53:41,623 INFO mapreduce.Job: map 46% reduce 0%
+2025-04-22 11:53:42,410 INFO mapreduce.Job: map 64% reduce 0%
+2025-04-22 11:53:44,179 INFO mapreduce.Job: map 79% reduce 0%
+2025-04-22 11:53:45,192 INFO mapreduce.Job: map 89% reduce 0%
+2025-04-22 11:53:45,729 INFO mapreduce.Job: map 100% reduce 0%
+2025-04-22 11:53:53,192 INFO mapreduce.Job: Job job_1745333783354_0001 completed successfully
+2025-04-22 11:53:53,192 INFO mapreduce.Job: Counters: 34
+    File System Counters
+        FILE: Number of bytes read=617410
+        FILE: Number of bytes written=67140
+        FILE: Number of read operations=0
+        FILE: Number of large read operations=0
+        FILE: Number of write operations=0
+        HDFS: Number of bytes read=170
+        HDFS: Number of bytes written=100000000
+        HDFS: Number of read operations=12
+        HDFS: Number of large read operations=0
+        HDFS: Number of write operations=2
+        HDFS: Number of bytes read erasure-coded=0
+    Job Counters 
+        Launched map tasks=2
+        Other local map tasks=2
+        Total time spent by all maps in occupied slots (ms)=1140196
+        Total time spent by all reduces in occupied slots (ms)=0
+        Total time spent by all map tasks (ms)=57098
+        Total vcore-milliseconds taken by all map tasks=57098
+        Total megabyte-milliseconds taken by all map tasks=146107888
+    Map-Reduce Framework
+        Map input records=10000000
+        Map output records=10000000
+        Input split bytes=170
+        Spilled Records=0
+        Merged Map outputs=0
+        GC time elapsed (ms)=475
+        CPU time spent (ms)=76200
+        Physical memory (bytes) snapshot=8581991936
+        Virtual memory (bytes) snapshot=14532157648
+        Total committed heap usage (bytes)=4290313312
+        Peak Map Physical memory (bytes)=3082078204
+        Peak Map Virtual memory (bytes)=2029872444
+    org.apache.hadoop.examples.terasort.TeraGen$Counters
+        CHECKSUM=21744662621937609
+    File Input Format Counters 
+        Bytes Read=0
+    File Output Format Counters 
+        Bytes Written=100000000
+exouser@node-master:~$
