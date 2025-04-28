@@ -87,3 +87,5 @@ Spent 348ms computing partitions.
       Bytes Read=0
    File Output Format Counters
       Bytes Written=1000000000
+2025-04-13 18:48:02,555 INFO terasort.TeraSort: done
+exouser@node-master:~$ 
