@@ -1,0 +1,97 @@
+exouser@node-master:~$ hadoop jar ~/hadoop-mapreduce-examples.jar terasort hdfs:///user/exouser/terasort-input hdfs:///user/exouser/terasort-output
+2025-04-25 13:01:00,683 INFO terasort.TeraSort: starting
+2025-04-25 13:01:01,481 INFO input.FileInputFormat: Total input files to process : 2
+Spent 170ms computing base-splits.
+Spent 2ms computing TeraScheduler splits.
+Computing input splits took 173ms
+Sampling 8 splits of 8
+Making 1 from 100000 sampled records
+Computing partitions took 362ms
+Spent 536ms computing partitions.
+2025-04-25 13:01:01,930 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at node-master/10.3.34.73:8032
+2025-04-25 13:01:02,220 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/exouser/.staging/job_1745598371221_0004
+2025-04-25 13:01:02,822 INFO mapreduce.JobSubmitter: number of splits:8
+2025-04-25 13:01:02,992 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1745598371221_0004
+2025-04-25 13:01:02,992 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-25 13:01:03,170 INFO conf.Configuration: resource-types.xml not found
+2025-04-25 13:01:03,170 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-25 13:01:03,237 INFO impl.YarnClientImpl: Submitted application application_1745598371221_0004
+2025-04-25 13:01:03,272 INFO mapreduce.Job: The url to track the job: http://node-master:8088/proxy/application_1745598371221_0004/
+2025-04-25 13:01:03,273 INFO mapreduce.Job: Running job: job_1745598371221_0004
+2025-04-25 13:01:08,352 INFO mapreduce.Job: Job job_1745598371221_0004 running in uber mode : false
+2025-04-25 13:01:08,353 INFO mapreduce.Job: map 0% reduce 0%
+2025-04-25 13:01:18,487 INFO mapreduce.Job: map 13% reduce 0%
+2025-04-25 13:01:19,492 INFO mapreduce.Job: map 50% reduce 0%
+2025-04-25 13:01:20,497 INFO mapreduce.Job: map 63% reduce 0%
+2025-04-25 13:01:21,504 INFO mapreduce.Job: map 75% reduce 0%
+2025-04-25 13:01:35,574 INFO mapreduce.Job: map 75% reduce 25%
+2025-04-25 13:04:19,144 INFO mapreduce.Job: map 88% reduce 25%
+2025-04-25 13:04:24,126 INFO mapreduce.Job: map 100% reduce 25%
+2025-04-25 13:04:26,154 INFO mapreduce.Job: map 100% reduce 50%
+2025-04-25 13:04:28,186 INFO mapreduce.Job: map 100% reduce 100%
+2025-04-25 13:04:28,278 INFO mapreduce.Job: Job job_1745598371221_0004 completed successfully
+2025-04-25 13:04:28,310 INFO mapreduce.Job: Counters: 58
+File System Counters
+    FILE: Number of bytes read=880002141
+    FILE: Number of bytes written=3122790471
+    FILE: Number of read operations=3
+    FILE: Number of large read operations=0
+    FILE: Number of write operations=8
+    HDFS: Number of bytes read=160
+    HDFS: Number of bytes written=1000000000
+    HDFS: Number of read operations=12
+    HDFS: Number of large read operations=0
+    HDFS: Number of write operations=2
+    HDFS: Number of bytes read erasure-coded=0
+Job Counters
+    Failed map tasks=2
+    Killed map tasks=2
+    Launched map tasks=1
+    Launched reduce tasks=1
+    Other local map tasks=3
+    Rack-local map tasks=4
+    Total time spent by all maps in occupied slots (ms)=125878
+    Total time spent by all reduces in occupied slots (ms)=374010
+    Total time spent by all map tasks (ms)=62907
+    Total time spent by all reduce tasks (ms)=187005
+    Total vcore-milliseconds taken by all map tasks=62907
+    Total vcore-milliseconds taken by all reduce tasks=187005
+    Total megabyte-milliseconds taken by all map tasks=1048384
+    Total megabyte-milliseconds taken by all reduce tasks=47873200
+Map-Reduce Framework
+    Map input records=10000000
+    Map output records=10000000
+    Map output bytes=120000000
+    Map output materialized bytes=10400000456
+    Input split bytes=162
+    Combine input records=0
+    Combine output records=0
+    Reduce input groups=10000000
+    Reduce shuffle bytes=10400000456
+    Reduce input records=10000000
+    Reduce output records=10000000
+    Spilled Records=399957784
+    Shuffled Maps=8
+    Failed Shuffles=0
+    Merged Map outputs=8
+    GC time elapsed (ms)=1286
+    CPU time spent (ms)=162813
+    Physical memory (bytes) snapshot=3144736768
+    Virtual memory (bytes) snapshot=18193742112
+    Total committed heap usage (bytes)=432013312
+    Peak Map Physical memory (bytes)=3736749568
+    Peak Map Virtual memory (bytes)=2013683712
+    Peak Reduce Physical memory (bytes)=291089612
+    Peak Reduce Virtual memory (bytes)=2078759424
+Shuffle Errors
+    BAD_ID=0
+    CONNECTION=0
+    IO_ERROR=0
+    WRONG_LENGTH=0
+    WRONG_MAP=0
+    WRONG_REDUCE=0
+File Input Format Counters
+    Bytes Read=0
+File Output Format Counters
+    Bytes Written=1000000000
+2025-04-25 13:04:28,319 INFO terasort.TeraSort: done

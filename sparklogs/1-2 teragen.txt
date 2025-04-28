@@ -1,0 +1,98 @@
+exouser@node-master:~$ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+  teragen 10000000 /teragen/input
+2025-04-25 13:29:24,688 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at node-master/10.3.34.73:8032
+2025-04-25 13:29:24,718 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/exouser/.staging/job_1745601169828_0001
+2025-04-25 13:29:23,467 INFO terasort.TeraGen: Generating 10000000 using 2
+2025-04-25 13:29:43,577 INFO mapreduce.JobSubmitter: number of splits:2
+2025-04-25 13:29:43,577 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1745601169828_0001
+2025-04-25 13:29:43,577 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-25 13:29:43,729 INFO conf.Configuration: resource-types.xml not found
+2025-04-25 13:29:44,110 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-25 13:29:44,134 INFO impl.YarnClientImpl: Submitted application application_1745601169828_0001
+2025-04-25 13:29:44,166 INFO mapreduce.Job: The url to track the job: http://node-master:8088/proxy/application_1745601169828_0001/
+2025-04-25 13:29:51,258 INFO mapreduce.Job: Running job: job_1745601169828_0001
+2025-04-25 13:29:51,259 INFO mapreduce.Job: Job job_1745601169828_0001 running in uber mode : false
+2025-04-25 13:30:13,395 INFO mapreduce.Job: map 0% reduce 0%
+2025-04-25 13:30:13,395 INFO mapreduce.Job: map 24% reduce 0%
+2025-04-25 13:30:24,039 INFO mapreduce.Job: map 37% reduce 0%
+2025-04-25 13:30:24,040 INFO mapreduce.Job: map 50% reduce 0%
+2025-04-25 13:32:51,097 INFO mapreduce.Job: Task Id : attempt_1745601169828_0001_m_000001_0, Status : FAILED
+Container launch failed for container_1745601169828_0001_01_000003 : java.net.ConnectException: Call From node-worker1/10.3.34.106 to node-master:36977 failed on connection exception: java.net.ConnectException: Connection refused; For more details see: http://wiki.apache.org/hadoop/ConnectionRefused
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor31.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:948)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:863)
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1588)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1529)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1426)
+	at org.apache.hadoop.ipc.Client$Connection.sendRpcRequest(Client.java:872)
+	at org.apache.hadoop.ipc.Client$Connection.run(Client.java:1167)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:258)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:139)
+	at com.sun.proxy.$Proxy85.startContainers(Unknown Source)
+	at org.apache.hadoop.yarn.api.impl.pb.client.ContainerManagementProtocolPBClientImpl.startContainers(ContainerManagementProtocolPBClientImpl.java:133)
+	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:437)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:170)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:162)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:100)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:366)
+	at com.sun.proxy.$Proxy85.startContainers(Unknown Source)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:160)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:393)
+	at org.apache.hadoop.yarn.client.api.impl.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+    2025-04-25 13:33:09,084 INFO mapreduce.Job: map 76% reduce 0%
+    2025-04-25 13:33:15,116 INFO mapreduce.Job: map 89% reduce 0%
+    2025-04-25 13:33:22,143 INFO mapreduce.Job: map 100% reduce 0%
+    2025-04-25 13:33:23,180 INFO mapreduce.Job: Job job_1745601169828_0001 completed successfully
+    2025-04-25 13:33:23,231 INFO mapreduce.Job: Counters: 36
+    File System Counters
+        FILE: Number of bytes read=0
+        FILE: Number of bytes written=617140
+        FILE: Number of read operations=0
+        FILE: Number of large read operations=0
+        FILE: Number of write operations=0
+        HDFS: Number of bytes read=170
+        HDFS: Number of bytes written=1000000000
+        HDFS: Number of read operations=12
+        HDFS: Number of large read operations=0
+        HDFS: Number of write operations=4
+        HDFS: Number of bytes read erasure-coded=0
+    Job Counters
+        Failed map tasks=1
+        Killed map tasks=1
+        Launched map tasks=4
+        Other local map tasks=4
+        Total time spent by all maps in occupied slots (ms)=143812
+        Total time spent by all reduces in occupied slots (ms)=0
+        Total time spent by all map tasks (ms)=71906
+        Total time spent by all reduce tasks (ms)=0
+        Total vcore-milliseconds taken by all map tasks=71906
+        Total megabyte-milliseconds taken by all map tasks=18407936
+    Map-Reduce Framework
+        Map input records=10000000
+        Map output records=10000000
+        Input split bytes=170
+        Spilled Records=0
+        Failed Shuffles=0
+        Merged Map outputs=0
+        GC time elapsed (ms)=607
+        CPU time spent (ms)=76110
+        Physical memory (bytes) snapshot=629932032
+        Virtual memory (bytes) snapshot=4156387328
+        Total committed heap usage (bytes)=432013312
+        Peak Map Physical memory (bytes)=317632512
+        Peak Map Virtual memory (bytes)=2078515200
+    org.apache.hadoop.examples.terasort.TeraGen$Counters
+        CHECKSUM=214760662691937609
+    File Input Format Counters
+        Bytes Read=0
+    File Output Format Counters
+        Bytes Written=1000000000
+

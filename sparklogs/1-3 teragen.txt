@@ -1,0 +1,93 @@
+exouser@node-master:~$ hadoop jar ~/hadoop-mapreduce-examples.jar \
+ teragen 10000000 \
+ hdfs:///user/exouser/terasort-input
+2025-04-25 12:45:09,890 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at node-master/10.3.34.73:8032
+2025-04-25 12:45:09,951 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/exouser/.staging/job_1745598371221_0002
+2025-04-25 12:45:09,681 INFO terasort.TeraGen: Generating 10000000 using 2
+2025-04-25 12:45:09,844 INFO mapreduce.JobSubmitter: number of splits:2
+2025-04-25 12:45:09,845 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1745598371221_0002
+2025-04-25 12:45:09,845 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-25 12:45:10,029 INFO conf.Configuration: resource-types.xml not found
+2025-04-25 12:45:10,029 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-25 12:45:10,115 INFO impl.YarnClientImpl: Submitted application application_1745598371221_0002
+2025-04-25 12:45:10,148 INFO mapreduce.Job: The url to track the job: http://node-master:8088/proxy/application_1745598371221_0002/
+2025-04-25 12:45:10,148 INFO mapreduce.Job: Running job: job_1745598371221_0002
+2025-04-25 12:45:17,250 INFO mapreduce.Job: map 0% reduce 0%
+2025-04-25 12:45:17,960 INFO mapreduce.Job: map 50% reduce 0%
+2025-04-25 12:46:17,950 INFO mapreduce.Job: Task Id : attempt_1745598371221_0002_m_000000_0, Status : FAILED
+Container launch failed for container_1745598371221_0002_01_000002 : java.net.ConnectException: Call From node-worker1/10.3.34.106 to node-master:45073 failed on connection exception: java.net.ConnectException: Connection refused; For more details see: http://wiki.apache.org/hadoop/ConnectionRefused
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor31.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:948)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:863)
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1588)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1529)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1426)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:258)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:139)
+	at com.sun.proxy.$Proxy85.startContainers(Unknown Source)
+	at org.apache.hadoop.yarn.api.impl.pb.client.ContainerManagementProtocolPBClientImpl.startContainers(ContainerManagementProtocolPBClientImpl.java:133)
+	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:437)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:170)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:162)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:100)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:366)
+	at com.sun.proxy.$Proxy86.startContainers(Unknown Source)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$Container.launch(ContainerLauncherImpl.java:160)
+	at org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl$EventProcessor.run(ContainerLauncherImpl.java:393)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)
+    2025-04-25 12:48:25,993 INFO mapreduce.Job: map 100% reduce 0%
+    2025-04-25 12:48:27,081 INFO mapreduce.Job: Job job_1745598371221_0002 completed successfully
+    2025-04-25 12:48:27,087 INFO mapreduce.Job: Counters: 35
+        File System Counters
+            FILE: Number of bytes read=0
+            FILE: Number of bytes written=617174
+            FILE: Number of read operations=0
+            FILE: Number of large read operations=0
+            FILE: Number of write operations=0
+            HDFS: Number of bytes read=167
+            HDFS: Number of bytes written=1000000000
+            HDFS: Number of read operations=12
+            HDFS: Number of large read operations=0
+            HDFS: Number of write operations=4
+            HDFS: Number of bytes read erasure-coded=0
+        Job Counters
+            Failed map tasks=1
+            Launched map tasks=3
+            Other local map tasks=3
+            Total time spent by all maps in occupied slots (ms)=21706
+            Total time spent by all reduces in occupied slots (ms)=0
+            Total time spent by all map tasks (ms)=10853
+            Total vcore-milliseconds taken by all map tasks=10853
+            Total megabyte-milliseconds taken by all map tasks=2778368
+        Map-Reduce Framework
+            Map input records=10000000
+            Map output records=10000000
+            Input split bytes=167
+            Spilled Records=0
+            Failed Shuffles=0
+            Merged Map outputs=0
+            GC time elapsed (ms)=196
+            CPU time spent (ms)=12240
+            Physical memory (bytes) snapshot=580739072
+            Virtual memory (bytes) snapshot=4145250684
+            Total committed heap usage (bytes)=432013312
+            Peak Map Physical memory (bytes)=291889152
+            Peak Map Virtual memory (bytes)=2072752128
+        org.apache.hadoop.examples.terasort.TeraGen$Counters
+            CHECKSUM=21472776955442609
+        File Input Format Counters
+            Bytes Read=0
+        File Output Format Counters
+            Bytes Written=1000000000
+exouser@node-master:~$
+

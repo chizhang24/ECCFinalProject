@@ -1,0 +1,141 @@
+exouser@node-master:~$ hadoop jar ~/hadoop-mapreduce-examples.jar \
+ terasort \
+ hdfs:///teragen/input \
+ hdfs:///teragen/output
+2025-04-25 14:53:06,128 INFO terasort.TeraSort: starting
+2025-04-25 14:53:06,380 INFO input.FileInputFormat: Total input files to process : 2
+Spent 146ms computing base-splits.
+Spent 2ms computing TeraScheduler splits.
+Computing input splits took 148ms
+Sampling 10 splits of 76
+Making 1 from 1000000 sampled records
+Computing partitions took 327ms
+Spent 476ms computing partitions.
+2025-04-25 14:53:07,236 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at node-master/10.3.34.73:8032
+2025-04-25 14:53:07,445 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/exouser/.staging/job_1745604580277_0004
+2025-04-25 14:53:08,661 INFO mapreduce.JobSubmitter: number of splits:76
+2025-04-25 14:53:08,627 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1745604580277_0004
+2025-04-25 14:53:08,687 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-25 14:53:08,811 INFO conf.Configuration: resource-types.xml not found
+2025-04-25 14:53:08,811 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-25 14:53:08,887 INFO impl.YarnClientImpl: Submitted application application_1745604580277_0004
+2025-04-25 14:53:08,901 INFO mapreduce.Job: The url to track the job: http://node-master:8088/proxy/application_1745604580277_0004/
+2025-04-25 14:53:14,001 INFO mapreduce.Job: Running job: job_1745604580277_0004
+2025-04-25 14:53:14,088 INFO mapreduce.Job: Job job_1745604580277_0004 running in uber mode : false
+2025-04-25 14:53:14,212 INFO mapreduce.Job: map 0% reduce 0%
+2025-04-25 14:53:25,243 INFO mapreduce.Job: map 5% reduce 0%
+2025-04-25 14:53:29,334 INFO mapreduce.Job: map 11% reduce 0%
+2025-04-25 14:53:29,340 INFO mapreduce.Job: map 13% reduce 0%
+2025-04-25 14:53:31,012 INFO mapreduce.Job: map 17% reduce 0%
+2025-04-25 14:53:35,461 INFO mapreduce.Job: map 18% reduce 0%
+2025-04-25 14:53:35,464 INFO mapreduce.Job: map 22% reduce 0%
+2025-04-25 14:53:41,580 INFO mapreduce.Job: map 25% reduce 0%
+2025-04-25 14:53:41,637 INFO mapreduce.Job: map 28% reduce 0%
+2025-04-25 14:53:41,662 INFO mapreduce.Job: map 30% reduce 0%
+2025-04-25 14:53:46,463 INFO mapreduce.Job: map 30% reduce 10%
+2025-04-25 14:53:50,646 INFO mapreduce.Job: map 34% reduce 12%
+2025-04-25 14:53:52,711 INFO mapreduce.Job: map 36% reduce 10%
+2025-04-25 14:53:54,683 INFO mapreduce.Job: map 38% reduce 12%
+2025-04-25 14:53:54,726 INFO mapreduce.Job: map 39% reduce 12%
+2025-04-25 14:53:54,759 INFO mapreduce.Job: map 42% reduce 12%
+2025-04-25 14:53:54,793 INFO mapreduce.Job: map 42% reduce 14%
+2025-04-25 14:53:54,816 INFO mapreduce.Job: map 43% reduce 14%
+2025-04-25 14:54:02,846 INFO mapreduce.Job: map 45% reduce 14%
+2025-04-25 14:54:02,854 INFO mapreduce.Job: map 47% reduce 14%
+2025-04-25 14:54:04,685 INFO mapreduce.Job: map 49% reduce 14%
+2025-04-25 14:54:05,854 INFO mapreduce.Job: map 49% reduce 16%
+2025-04-25 14:54:06,855 INFO mapreduce.Job: map 50% reduce 16%
+2025-04-25 14:54:14,908 INFO mapreduce.Job: map 51% reduce 16%
+2025-04-25 14:54:14,910 INFO mapreduce.Job: map 51% reduce 17%
+2025-04-25 14:54:15,947 INFO mapreduce.Job: map 55% reduce 17%
+2025-04-25 14:50:17,232 INFO mapreduce.Job: map 99% reduce 32%
+2025-04-25 14:50:29,233 INFO mapreduce.Job: map 100% reduce 32%
+2025-04-25 14:50:51,243 INFO mapreduce.Job: map 100% reduce 33%
+2025-04-25 14:50:44,278 INFO mapreduce.Job: map 100% reduce 68%
+2025-04-25 14:50:59,292 INFO mapreduce.Job: map 100% reduce 70%
+2025-04-25 14:50:57,312 INFO mapreduce.Job: map 100% reduce 73%
+2025-04-25 14:51:03,341 INFO mapreduce.Job: map 100% reduce 77%
+2025-04-25 14:51:05,352 INFO mapreduce.Job: map 100% reduce 80%
+2025-04-25 14:50:17,368 INFO mapreduce.Job: map 100% reduce 83%
+2025-04-25 14:50:23,386 INFO mapreduce.Job: map 100% reduce 86%
+2025-04-25 14:50:30,410 INFO mapreduce.Job: map 100% reduce 89%
+2025-04-25 14:50:36,425 INFO mapreduce.Job: map 100% reduce 93%
+2025-04-25 14:50:43,449 INFO mapreduce.Job: map 100% reduce 96%
+2025-04-25 14:50:49,470 INFO mapreduce.Job: map 100% reduce 99%
+2025-04-25 14:50:55,491 INFO mapreduce.Job: map 100% reduce 100%
+2025-04-25 14:50:55,501 INFO mapreduce.Job: Job job_1745604580277_0004 completed successfully
+2025-04-25 14:50:55,502 INFO mapreduce.Job: Counters: 58
+
+File System Counters
+	FILE: Number of bytes read=30779621316
+	FILE: Number of bytes written=41203490628
+	FILE: Number of read operations=0
+	FILE: Number of large read operations=0
+	FILE: Number of write operations=0
+	HDFS: Number of bytes read=10000008740
+	HDFS: Number of bytes written=10000000000
+	HDFS: Number of read operations=233
+	HDFS: Number of large read operations=0
+	HDFS: Number of write operations=2
+	HDFS: Number of bytes read erasure-coded=0
+
+Job Counters
+	Failed map tasks=8
+	Killed map tasks=3
+	Launched map tasks=87
+	Launched reduce tasks=1
+	Other local map tasks=10
+	Data-local map tasks=64
+	Rack-local map tasks=13
+	Total time spent by all maps in occupied slots (ms)=1316524
+	Total time spent by all reduces in occupied slots (ms)=889156
+	Total time spent by all map tasks (ms)=658262
+	Total time spent by all reduce tasks (ms)=444578
+	Total vcore-milliseconds taken by all map tasks=658262
+	Total vcore-milliseconds taken by all reduce tasks=444578
+	Total megabyte-milliseconds taken by all map tasks=168515072
+	Total megabyte-milliseconds taken by all reduce tasks=113811968
+
+Map-Reduce Framework
+	Map input records=10000000
+	Map output records=10000000
+	Map output bytes=102000000
+	Map output materialized bytes=10400000456
+	Input split bytes=8740
+	Combine input records=0
+	Combine output records=0
+    Reduce input groups=10000000
+	Reduce shuffle bytes=10400000456
+	Reduce input records=10000000
+	Reduce output records=10000000
+	Spilled Records=395957884
+	Shuffled Maps=76
+	Failed Shuffles=0
+	Merged Map outputs=76
+	GC time elapsed (ms)=14506
+	CPU time spent (ms)=775670
+	Physical memory (bytes) snapshot=2748497088
+	Virtual memory (bytes) snapshot=16206832000
+	Total committed heap usage (bytes)=16632512512
+	Peak Map Physical memory (bytes)=376734656
+	Peak Map Virtual memory (bytes)=2096241120
+	Peak Reduce Physical memory (bytes)=3758803964
+	Peak Reduce Virtual memory (bytes)=2095853568
+
+Shuffle Errors
+	BAD_ID=0
+	CONNECTION=0
+	IO_ERROR=0
+	WRONG_LENGTH=0
+	WRONG_MAP=0
+	WRONG_REDUCE=0
+
+File Input Format Counters
+	Bytes Read=0
+
+File Output Format Counters
+	Bytes Written=10000000000
+
+2025-04-25 15:00:55,840 INFO terasort.TeraSort: done
+
+exouser@node-master:~$
