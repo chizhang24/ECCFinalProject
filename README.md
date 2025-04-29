@@ -65,6 +65,43 @@ Although not all files are tracked in this repo, the project includes the follow
 
 ---
 
+### Hadoop MapReduce on Jetstream
+
+1. Create Jetstream instances of m3.large flavor with 60GB RAM and 60GB Root Disk
+   Start HDFS and YARN on the cluster
+   ```bash
+   $ $HADOOP_HOME/sbin/start-dfs.sh
+   $ $HADOOP_HOME/sbin/start-yarn.sh
+   ```
+   
+2. Generate data using Teragen:
+   ```bash
+   $ hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar teragen 10000000 /input
+   ```
+   
+3. Run Terasort:
+ ```bash
+   hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+   terasort /user/exouser/terasort-input /user/exouser/terasort-output
+ ```
+
+---
+
+### Spark on Jetstream
+
+1. Install Spark and start the services
+   ```bash
+    $SPARK_HOME/sbin/start-all.sh
+
+
+3. Submit Spark job:
+   ```bash
+   $ spark-submit --master yarn --deploy-mode client --num-executors 6 --executor-cores 2 --executor-memory 4G /home/exouser/terasort_benchmark.py
+
+   ```
+
+---
+
 ## 📊 Performance Highlights
 
 | Environment  | Framework        | Wall Time ↓ | Throughput ↑ | Notes |
