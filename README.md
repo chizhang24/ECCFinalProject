@@ -96,7 +96,7 @@ Although not all files are tracked in this repo, the project includes the follow
 
 3. Submit Spark job:
    ```bash
-   $ spark-submit --master yarn --deploy-mode client --num-executors 6 --executor-cores 2 --executor-memory 4G /home/exouser/terasort_benchmark.py
+   $ spark-submit --master yarn --deploy-mode client --num-executors 6 --executor-cores 2 --executor-memory 4G /home/exouser/spark_terasort.py
 
    ```
 
