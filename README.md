@@ -96,7 +96,7 @@ Although not all files are tracked in this repo, the project includes the follow
 
 3. Submit Spark job:
    ```bash
-   $ spark-submit --master yarn --deploy-mode client --num-executors 6 --executor-cores 2 --executor-memory 4G /home/exouser/spark_terasort.py
+   $ spark-submit --master yarn --deploy-mode client --num-executors 6 --executor-cores 2 --executor-memory 1G /home/exouser/spark_terasort.py
 
    ```
 
@@ -115,10 +115,9 @@ Although not all files are tracked in this repo, the project includes the follow
 
 ## 📌 Conclusion
 
-- **Spark outperforms Hadoop MapReduce** in most benchmarks, particularly on cloud infrastructure.
-- **Jetstream2 offers better scalability and stability** for both frameworks compared to local Docker setups.
-- Docker remains valuable for testing and prototyping distributed systems locally.
-
+ - We benchmarked 4 cloud platforms in shuffle heavy task (TeraSort) extensively
+ - Analyzed the best scenarios where the platforms most suitably apply
+ - For our task, Spark Docker has the best performance
 ---
 
 ## 👥 Contributors
