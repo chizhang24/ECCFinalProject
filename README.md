@@ -1,4 +1,4 @@
-# Distributed Processing with Hadoop MapReduce and Spark on Docker & Jetstream2
+# Scalability Benchmark: Multi-Node Sorting on Hadoop and Spark
 
 This repository documents our final project for the Engineering Cloud Computing course. It explores the setup, benchmarking, and comparative analysis of distributed data processing frameworks — **Hadoop MapReduce** and **Apache Spark** — deployed in both **Docker-based environments** and on the **Jetstream2 cloud platform**.
 
