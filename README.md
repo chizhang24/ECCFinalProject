@@ -1,4 +1,4 @@
-# Distributed Processing with Hadoop MapReduce and Spark on Docker & Jetstream2
+# Scalability Benchmark: Multi-Node Sorting on Hadoop and Spark
 
 This repository documents our final project for the Engineering Cloud Computing course. It explores the setup, benchmarking, and comparative analysis of distributed data processing frameworks — **Hadoop MapReduce** and **Apache Spark** — deployed in both **Docker-based environments** and on the **Jetstream2 cloud platform**.
 
@@ -65,6 +65,43 @@ Although not all files are tracked in this repo, the project includes the follow
 
 ---
 
+### Hadoop MapReduce on Jetstream
+
+1. Create Jetstream instances of m3.large flavor with 60GB RAM and 60GB Root Disk
+   Start HDFS and YARN on the cluster
+   ```bash
+   $ $HADOOP_HOME/sbin/start-dfs.sh
+   $ $HADOOP_HOME/sbin/start-yarn.sh
+   ```
+   
+2. Generate data using Teragen:
+   ```bash
+   $ hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar teragen 10000000 /input
+   ```
+   
+3. Run Terasort:
+ ```bash
+   hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+   terasort /user/exouser/terasort-input /user/exouser/terasort-output
+ ```
+
+---
+
+### Spark on Jetstream
+
+1. Install Spark and start the services
+   ```bash
+    $SPARK_HOME/sbin/start-all.sh
+
+
+3. Submit Spark job:
+   ```bash
+   $ spark-submit --master yarn --deploy-mode client --num-executors 6 --executor-cores 2 --executor-memory 1G /home/exouser/spark_terasort.py
+
+   ```
+
+---
+
 ## 📊 Performance Highlights
 
 | Environment  | Framework        | Wall Time ↓ | Throughput ↑ | Notes |
@@ -78,10 +115,9 @@ Although not all files are tracked in this repo, the project includes the follow
 
 ## 📌 Conclusion
 
-- **Spark outperforms Hadoop MapReduce** in most benchmarks, particularly on cloud infrastructure.
-- **Jetstream2 offers better scalability and stability** for both frameworks compared to local Docker setups.
-- Docker remains valuable for testing and prototyping distributed systems locally.
-
+ - We benchmarked 4 cloud platforms in shuffle heavy task (TeraSort) extensively
+ - Analyzed the best scenarios where the platforms most suitably apply
+ - For our task, Spark Docker has the best performance
 ---
 
 ## 👥 Contributors
