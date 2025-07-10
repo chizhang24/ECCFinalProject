@@ -122,7 +122,7 @@ Although not all files are tracked in this repo, the project includes the follow
 
 ## 👥 Contributors
 
-- Chi Zhang - czhang87@iu.edu
+- Chi Zhang - czh4@iu.edu
 - Krishna Priya - fkrishna@iu.edu
 - Sanjana Reddy Nenturi - snenturi@iu.edu
 - Sai Shriya Surla - ssurla@iu.edu
