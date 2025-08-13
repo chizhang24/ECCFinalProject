@@ -1,0 +1,116 @@
+2025-04-24 20:36:04,439 INFO terasort.TeraSort: starting
+2025-04-24 20:36:05,142 INFO input.FileInputFormat: Total input files to process : 2
+Spent 106ms computing base-splits.
+Spent 1ms computing TeraScheduler splits.
+Computing input splits took 107ms
+Sampling 8 splits of 8
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,182 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+Making 1 from 100000 sampled records
+Computing parititions took 300ms
+Spent 408ms computing partitions.
+2025-04-24 20:36:05,603 INFO client.RMProxy: Connecting to ResourceManager at resourcemanager/172.20.0.7:8032
+2025-04-24 20:36:05,717 INFO client.AHSProxy: Connecting to Application History server at historyserver/172.20.0.8:10200
+2025-04-24 20:36:05,811 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1745526841508_0002
+2025-04-24 20:36:05,865 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,941 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,969 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:05,983 INFO mapreduce.JobSubmitter: number of splits:8
+2025-04-24 20:36:06,081 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2025-04-24 20:36:06,098 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1745526841508_0002
+2025-04-24 20:36:06,098 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-24 20:36:06,251 INFO conf.Configuration: resource-types.xml not found
+2025-04-24 20:36:06,251 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-24 20:36:06,514 INFO impl.YarnClientImpl: Submitted application application_1745526841508_0002
+2025-04-24 20:36:06,575 INFO mapreduce.Job: The url to track the job: http://resourcemanager:8088/proxy/application_1745526841508_0002/
+2025-04-24 20:36:06,575 INFO mapreduce.Job: Running job: job_1745526841508_0002
+2025-04-24 20:36:12,690 INFO mapreduce.Job: Job job_1745526841508_0002 running in uber mode : false
+2025-04-24 20:36:12,692 INFO mapreduce.Job:  map 0% reduce 0%
+2025-04-24 20:36:28,877 INFO mapreduce.Job:  map 9% reduce 0%
+2025-04-24 20:36:29,883 INFO mapreduce.Job:  map 18% reduce 0%
+2025-04-24 20:36:30,887 INFO mapreduce.Job:  map 28% reduce 0%
+2025-04-24 20:36:31,892 INFO mapreduce.Job:  map 38% reduce 0%
+2025-04-24 20:36:33,903 INFO mapreduce.Job:  map 47% reduce 0%
+2025-04-24 20:36:34,907 INFO mapreduce.Job:  map 62% reduce 0%
+2025-04-24 20:36:35,911 INFO mapreduce.Job:  map 78% reduce 0%
+2025-04-24 20:36:36,926 INFO mapreduce.Job:  map 92% reduce 0%
+2025-04-24 20:36:37,931 INFO mapreduce.Job:  map 95% reduce 0%
+2025-04-24 20:36:39,942 INFO mapreduce.Job:  map 100% reduce 0%
+2025-04-24 20:36:53,008 INFO mapreduce.Job:  map 100% reduce 41%
+2025-04-24 20:36:59,039 INFO mapreduce.Job:  map 100% reduce 46%
+2025-04-24 20:37:05,070 INFO mapreduce.Job:  map 100% reduce 51%
+2025-04-24 20:37:11,101 INFO mapreduce.Job:  map 100% reduce 56%
+2025-04-24 20:37:17,134 INFO mapreduce.Job:  map 100% reduce 61%
+2025-04-24 20:37:23,161 INFO mapreduce.Job:  map 100% reduce 66%
+2025-04-24 20:37:29,188 INFO mapreduce.Job:  map 100% reduce 89%
+2025-04-24 20:37:32,201 INFO mapreduce.Job:  map 100% reduce 100%
+2025-04-24 20:37:32,210 INFO mapreduce.Job: Job job_1745526841508_0002 completed successfully
+2025-04-24 20:37:32,336 INFO mapreduce.Job: Counters: 55
+	File System Counters
+		FILE: Number of bytes read=581583903
+		FILE: Number of bytes written=874261037
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1000000832
+		HDFS: Number of bytes written=1000000000
+		HDFS: Number of read operations=29
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=9
+		Launched reduce tasks=1
+		Rack-local map tasks=9
+		Total time spent by all maps in occupied slots (ms)=624504
+		Total time spent by all reduces in occupied slots (ms)=420304
+		Total time spent by all map tasks (ms)=156126
+		Total time spent by all reduce tasks (ms)=52538
+		Total vcore-milliseconds taken by all map tasks=156126
+		Total vcore-milliseconds taken by all reduce tasks=52538
+		Total megabyte-milliseconds taken by all map tasks=639492096
+		Total megabyte-milliseconds taken by all reduce tasks=430391296
+	Map-Reduce Framework
+		Map input records=10000000
+		Map output records=10000000
+		Map output bytes=1020000000
+		Map output materialized bytes=290604597
+		Input split bytes=832
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10000000
+		Reduce shuffle bytes=290604597
+		Reduce input records=10000000
+		Reduce output records=10000000
+		Spilled Records=30000000
+		Shuffled Maps =8
+		Failed Shuffles=0
+		Merged Map outputs=8
+		GC time elapsed (ms)=2044
+		CPU time spent (ms)=213860
+		Physical memory (bytes) snapshot=5880238080
+		Virtual memory (bytes) snapshot=49422364672
+		Total committed heap usage (bytes)=7310671872
+		Peak Map Physical memory (bytes)=607010816
+		Peak Map Virtual memory (bytes)=5123772416
+		Peak Reduce Physical memory (bytes)=1584857088
+		Peak Reduce Virtual memory (bytes)=8469831680
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1000000000
+	File Output Format Counters 
+		Bytes Written=1000000000
+2025-04-24 20:37:32,338 INFO terasort.TeraSort: done

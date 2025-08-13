@@ -1,0 +1,150 @@
+exouser@node-master:~$ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+ terasort /teragen/input /teragen/output
+2025-04-21 16:48:07,589 INFO terasort.TeraSort: starting
+2025-04-21 16:48:07,837 INFO org.apache.hadoop.mapreduce.lib.input.FileInputFormat: Total input files to process : 2
+Spent 145ms computing base-splits.
+Spent 1ms computing TeraScheduler splits.
+Computing input splits took 147ms
+Sampling 10 splits of 76
+Making 1 from 100000 sampled records
+Computing parititions took 201ms
+Spent 263ms computing partitions.
+2025-04-21 16:48:09,226 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at node-master/10.3.34.73:8032
+2025-04-21 16:48:09,447 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/exouser/.staging/job_17452606853730_0002
+2025-04-21 16:48:09,608 INFO mapreduce.JobSubmitter: number of splits:8
+2025-04-21 16:48:09,659 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_17452606853730_0002
+2025-04-21 16:48:09,659 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-21 16:48:09,699 INFO conf.Configuration: resource-types.xml not found
+2025-04-21 16:48:09,700 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-21 16:48:09,922 INFO impl.YarnClientImpl: Submitted application application_17452606853730_0002
+2025-04-21 16:48:09,969 INFO mapreduce.Job: The url to track the job: http://node-master:8088/proxy/application_17452606853730_0002/
+2025-04-21 16:48:09,969 INFO mapreduce.Job: Running job: job_17452606853730_0002
+2025-04-21 16:48:11,987 INFO mapreduce.Job: Job job_17452606853730_0002 running in uber mode : false
+2025-04-21 16:48:12,014 INFO mapreduce.Job:  map 0% reduce 0%
+2025-04-21 16:48:15,849 INFO mapreduce.Job: map 1% reduce 0%
+2025-04-21 16:48:15,888 INFO mapreduce.Job: map 1% reduce 0%
+2025-04-21 16:48:15,896 INFO mapreduce.Job: map 3% reduce 0%
+2025-04-21 16:48:15,986 INFO mapreduce.Job: map 4% reduce 0%
+2025-04-21 16:48:15,987 INFO mapreduce.Job: map 7% reduce 0%
+2025-04-21 16:48:16,007 INFO mapreduce.Job: map 9% reduce 0%
+2025-04-21 16:48:16,057 INFO mapreduce.Job: map 12% reduce 0%
+2025-04-21 16:48:16,089 INFO mapreduce.Job: map 14% reduce 0%
+2025-04-21 16:48:16,666 INFO mapreduce.Job: map 17% reduce 0%
+2025-04-21 16:48:16,687 INFO mapreduce.Job: map 22% reduce 0%
+2025-04-21 16:48:16,887 INFO mapreduce.Job: map 22% reduce 0%
+2025-04-21 16:48:16,900 INFO mapreduce.Job: map 24% reduce 0%
+2025-04-21 16:48:16,918 INFO mapreduce.Job: map 29% reduce 0%
+2025-04-21 16:48:17,149 INFO mapreduce.Job: map 35% reduce 0%
+2025-04-21 16:48:17,197 INFO mapreduce.Job: map 39% reduce 0%
+2025-04-21 16:48:17,537 INFO mapreduce.Job: map 43% reduce 21%
+2025-04-21 16:48:17,614 INFO mapreduce.Job: map 45% reduce 21%
+2025-04-21 16:48:17,927 INFO mapreduce.Job: map 50% reduce 21%
+2025-04-21 16:48:17,947 INFO mapreduce.Job: map 53% reduce 21%
+2025-04-21 16:48:18,015 INFO mapreduce.Job: map 57% reduce 22%
+2025-04-21 16:48:18,178 INFO mapreduce.Job: map 59% reduce 22%
+2025-04-21 16:48:18,322 INFO mapreduce.Job: map 61% reduce 22%
+2025-04-21 16:48:18,330 INFO mapreduce.Job: map 65% reduce 22%
+2025-04-21 16:48:18,509 INFO mapreduce.Job: map 67% reduce 22%
+2025-04-21 16:48:18,537 INFO mapreduce.Job: map 69% reduce 22%
+2025-04-21 16:48:18,597 INFO mapreduce.Job: map 71% reduce 22%
+2025-04-21 16:48:18,870 INFO mapreduce.Job: map 77% reduce 22%
+2025-04-21 16:48:19,250 INFO mapreduce.Job: map 80% reduce 22%
+2025-04-21 16:48:19,297 INFO mapreduce.Job: map 83% reduce 22%
+2025-04-21 16:48:19,335 INFO mapreduce.Job: map 85% reduce 22%
+2025-04-21 16:48:19,470 INFO mapreduce.Job: map 88% reduce 22%
+2025-04-21 16:48:19,579 INFO mapreduce.Job: map 90% reduce 22%
+2025-04-21 16:48:19,647 INFO mapreduce.Job: map 92% reduce 33%
+2025-04-21 16:48:19,670 INFO mapreduce.Job: map 95% reduce 33%
+2025-04-21 16:48:19,787 INFO mapreduce.Job: map 97% reduce 33%
+2025-04-21 16:48:19,890 INFO mapreduce.Job: map 99% reduce 33%
+2025-04-21 16:48:20,040 INFO mapreduce.Job: map 100% reduce 50%
+2025-04-21 16:48:20,173 INFO mapreduce.Job: map 100% reduce 64%
+2025-04-21 16:48:20,693 INFO mapreduce.Job: map 100% reduce 71%
+2025-04-21 16:48:20,749 INFO mapreduce.Job: map 100% reduce 74%
+2025-04-21 16:48:20,853 INFO mapreduce.Job: map 100% reduce 77%
+2025-04-21 16:48:20,886 INFO mapreduce.Job: map 100% reduce 80%
+2025-04-21 16:48:20,905 INFO mapreduce.Job: map 100% reduce 83%
+2025-04-21 16:48:20,915 INFO mapreduce.Job: map 100% reduce 86%
+2025-04-21 16:48:20,968 INFO mapreduce.Job: map 100% reduce 89%
+2025-04-21 16:48:20,993 INFO mapreduce.Job: map 100% reduce 94%
+2025-04-21 16:48:21,016 INFO mapreduce.Job: map 100% reduce 97%
+2025-04-21 16:48:21,067 INFO mapreduce.Job: map 100% reduce 100%
+2025-04-21 16:48:21,863 INFO mapreduce.Job: Job job_17452606853730_0002 completed successfully
+2025-04-21 16:48:21,884 INFO mapreduce.Job: Counters: 34
+   File System Counters
+      FILE: Number of bytes read=30777621315
+      FILE: Number of bytes written=1243940997
+      2025-04-21 16:50:29,643 INFO mapreduce.Job: map 100% reduce 74%
+2025-04-21 16:50:29,663 INFO mapreduce.Job: map 100% reduce 77%
+2025-04-21 16:50:29,680 INFO mapreduce.Job: map 100% reduce 80%
+2025-04-21 16:50:29,686 INFO mapreduce.Job: map 100% reduce 83%
+2025-04-21 16:50:29,753 INFO mapreduce.Job: map 100% reduce 86%
+2025-04-21 16:50:29,814 INFO mapreduce.Job: map 100% reduce 89%
+2025-04-21 16:50:29,833 INFO mapreduce.Job: map 100% reduce 94%
+2025-04-21 16:50:29,853 INFO mapreduce.Job: map 100% reduce 97%
+2025-04-21 16:50:30,617 INFO mapreduce.Job: map 100% reduce 100%
+2025-04-21 16:51:21,062 INFO mapreduce.Job: Job job_17452606853730_0002 completed successfully
+2025-04-21 16:51:21,062 INFO mapreduce.Job: Counters: 34
+    File System Counters
+        FILE: Number of bytes read=30777621315
+        FILE: Number of bytes written=1243940997
+        FILE: Number of read operations=0
+        FILE: Number of large read operations=0
+        FILE: Number of write operations=0
+        HDFS: Number of bytes read=1000000000
+        HDFS: Number of bytes written=1000000000
+        HDFS: Number of read operations=223
+        HDFS: Number of large read operations=0
+        HDFS: Number of write operations=2
+        HDFS: Number of bytes read erasure-coded=0
+    Job Counters 
+        Killed map tasks=1
+        Launched map tasks=77
+        Launched reduce tasks=8
+        Data-local map tasks=8
+        Other local map tasks=2
+        Total time spent by all maps in occupied slots (ms)=1263886
+        Total time spent by all reduces in occupied slots (ms)=334100
+        Total time spent by all map tasks (ms)=54301
+        Total vcore-milliseconds taken by all map tasks=519028
+        Total megabyte-milliseconds taken by all map tasks=13901056
+        Total vcore-milliseconds taken by all reduce tasks=167883
+        Total megabyte-milliseconds taken by all reduce tasks=42755680
+    Map-Reduce Framework
+        Map input records=10000000
+        Map output records=10000000
+        Map output bytes=120000000
+        Map output materialized bytes=14000008456
+        Input split bytes=8748
+        Combine input records=0
+        Combine output records=0
+        Reduce input groups=10000000
+        Reduce shuffle bytes=14000008456
+        Reduce input records=10000000
+        Reduce output records=10000000
+        Spilled Records=200057784
+        Shuffled Maps=76
+        Failed Shuffles=0
+        GC time elapsed (ms)=9269
+        CPU time spent (ms)=611850
+        Physical memory (bytes) snapshot=27222274048
+        Virtual memory (bytes) snapshot=164337272832
+        Total committed heap usage (bytes)=4290313312
+        Peak Map Physical memory (bytes)=3062282240
+        Peak Map Virtual memory (bytes)=20228812800
+        Peak Reduce Physical memory (bytes)=2722386944
+        Peak Reduce Virtual memory (bytes)=20977098712
+    Shuffle Errors
+        BAD_ID=0
+        CONNECTION=0
+        IO_ERROR=0
+        WRONG_LENGTH=0
+        WRONG_MAP=0
+        WRONG_REDUCE=0
+    File Input Format Counters 
+        Bytes Read=1000000000
+    File Output Format Counters 
+        Bytes Written=1000000000
+2025-04-21 16:51:21,964 INFO terasort.TeraSort: done
+exouser@node-master:~$
+

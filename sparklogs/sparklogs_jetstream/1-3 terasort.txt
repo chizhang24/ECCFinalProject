@@ -1,0 +1,417 @@
+exouser@node-master:~$ spark-submit --master yarn --deploy-mode client --num-executors 3 --executor-cores 2 --executor-memory 1G /home/exouser/terasort_benchmark.py
+
+25/04/28 13:51:39 INFO SparkContext: Running Spark version 3.4.1
+25/04/28 13:51:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/04/28 13:51:39 INFO ResourceUtils: ==============================================================
+25/04/28 13:51:39 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/04/28 13:51:39 INFO ResourceUtils: ==============================================================
+25/04/28 13:51:39 INFO SparkContext: Submitted application: TeraSort
+25/04/28 13:51:39 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/04/28 13:51:39 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+25/04/28 13:51:39 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/04/28 13:51:39 INFO SecurityManager: Changing view acls to: exouser
+25/04/28 13:51:39 INFO SecurityManager: Changing modify acls to: exouser
+25/04/28 13:51:39 INFO SecurityManager: Changing view acls groups to: 
+25/04/28 13:51:39 INFO SecurityManager: Changing modify acls groups to: 
+25/04/28 13:51:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: exouser; groups with view permissions: EMPTY; users with modify permissions: exouser; groups with modify permissions: EMPTY
+25/04/28 13:51:39 INFO Utils: Successfully started service 'sparkDriver' on port 46491.
+25/04/28 13:51:39 INFO SparkEnv: Registering MapOutputTracker
+25/04/28 13:51:39 INFO SparkEnv: Registering BlockManagerMaster
+25/04/28 13:51:39 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/04/28 13:51:39 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/04/28 13:51:39 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/04/28 13:51:39 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-3f32e1d6-41ac-4293-bb27-0aa59aaf6561
+25/04/28 13:51:39 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/04/28 13:51:39 INFO SparkEnv: Registering OutputCommitCoordinator
+25/04/28 13:51:39 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/04/28 13:51:39 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/04/28 13:51:39 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at node-master/10.3.34.73:8032
+25/04/28 13:51:40 INFO Configuration: resource-types.xml not found
+25/04/28 13:51:40 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+25/04/28 13:51:40 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (1536 MB per container)
+25/04/28 13:51:40 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+25/04/28 13:51:40 INFO Client: Setting up container launch context for our AM
+25/04/28 13:51:40 INFO Client: Setting up the launch environment for our AM container
+25/04/28 13:51:40 INFO Client: Preparing resources for our AM container
+25/04/28 13:51:40 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+25/04/28 13:51:42 INFO Client: Uploading resource file:/tmp/spark-3c0c10e4-383b-4fa9-bdbc-5cdd7006c548/__spark_libs__15766344644229199465.zip -> hdfs://node-master:9000/user/exouser/.sparkStaging/application_1745862240057_0003/__spark_libs__15766344644229199465.zip
+25/04/28 13:51:43 INFO Client: Uploading resource file:/home/exouser/spark/python/lib/pyspark.zip -> hdfs://node-master:9000/user/exouser/.sparkStaging/application_1745862240057_0003/pyspark.zip
+25/04/28 13:51:43 INFO Client: Uploading resource file:/home/exouser/spark/python/lib/py4j-0.10.9.7-src.zip -> hdfs://node-master:9000/user/exouser/.sparkStaging/application_1745862240057_0003/py4j-0.10.9.7-src.zip
+25/04/28 13:51:43 INFO Client: Uploading resource file:/tmp/spark-3c0c10e4-383b-4fa9-bdbc-5cdd7006c548/__spark_conf__3341633214416697329.zip -> hdfs://node-master:9000/user/exouser/.sparkStaging/application_1745862240057_0003/__spark_conf__.zip
+25/04/28 13:51:43 INFO SecurityManager: Changing view acls to: exouser
+25/04/28 13:51:43 INFO SecurityManager: Changing modify acls to: exouser
+25/04/28 13:51:43 INFO SecurityManager: Changing view acls groups to: 
+25/04/28 13:51:43 INFO SecurityManager: Changing modify acls groups to: 
+25/04/28 13:51:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: exouser; groups with view permissions: EMPTY; users with modify permissions: exouser; groups with modify permissions: EMPTY
+25/04/28 13:51:43 INFO Client: Submitting application application_1745862240057_0003 to ResourceManager
+25/04/28 13:51:43 INFO YarnClientImpl: Submitted application application_1745862240057_0003
+25/04/28 13:51:44 INFO Client: Application report for application_1745862240057_0003 (state: ACCEPTED)
+25/04/28 13:51:44 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1745862703955
+	 final status: UNDEFINED
+	 tracking URL: http://node-master:8088/proxy/application_1745862240057_0003/
+	 user: exouser
+25/04/28 13:51:45 INFO Client: Application report for application_1745862240057_0003 (state: ACCEPTED)
+25/04/28 13:51:46 INFO Client: Application report for application_1745862240057_0003 (state: ACCEPTED)
+25/04/28 13:51:47 INFO Client: Application report for application_1745862240057_0003 (state: ACCEPTED)
+25/04/28 13:51:48 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> node-master, PROXY_URI_BASES -> http://node-master:8088/proxy/application_1745862240057_0003), /proxy/application_1745862240057_0003
+25/04/28 13:51:48 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+25/04/28 13:51:48 INFO Client: Application report for application_1745862240057_0003 (state: RUNNING)
+25/04/28 13:51:48 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 10.3.34.151
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1745862703955
+	 final status: UNDEFINED
+	 tracking URL: http://node-master:8088/proxy/application_1745862240057_0003/
+	 user: exouser
+25/04/28 13:51:48 INFO YarnClientSchedulerBackend: Application application_1745862240057_0003 has started running.
+25/04/28 13:51:49 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43447.
+25/04/28 13:51:49 INFO NettyBlockTransferService: Server created on node-master:43447
+25/04/28 13:51:49 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/04/28 13:51:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, node-master, 43447, None)
+25/04/28 13:51:49 INFO BlockManagerMasterEndpoint: Registering block manager node-master:43447 with 434.4 MiB RAM, BlockManagerId(driver, node-master, 43447, None)
+25/04/28 13:51:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, node-master, 43447, None)
+25/04/28 13:51:49 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, node-master, 43447, None)
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:49 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:51:53 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.3.34.106:39472) with ID 2,  ResourceProfileId 0
+25/04/28 13:51:53 INFO BlockManagerMasterEndpoint: Registering block manager node-worker1:45119 with 434.4 MiB RAM, BlockManagerId(2, node-worker1, 45119, None)
+25/04/28 13:52:09 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000000000(ns)
+25/04/28 13:52:09 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/04/28 13:52:09 INFO SharedState: Warehouse path is 'file:/home/exouser/spark-warehouse'.
+25/04/28 13:52:09 INFO ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:52:09 INFO ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:52:09 INFO ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:52:09 INFO ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:52:09 INFO ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/04/28 13:52:10 INFO InMemoryFileIndex: It took 46 ms to list leaf files for 1 paths.
+25/04/28 13:52:12 INFO FileSourceStrategy: Pushed Filters: 
+25/04/28 13:52:12 INFO FileSourceStrategy: Post-Scan Filters: 
+25/04/28 13:52:12 INFO CodeGenerator: Code generated in 137.318815 ms
+25/04/28 13:52:12 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 201.0 KiB, free 434.2 MiB)
+25/04/28 13:52:12 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 434.2 MiB)
+25/04/28 13:52:12 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on node-master:43447 (size: 35.4 KiB, free: 434.4 MiB)
+25/04/28 13:52:12 INFO SparkContext: Created broadcast 0 from count at NativeMethodAccessorImpl.java:0
+25/04/28 13:52:12 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+25/04/28 13:52:12 INFO DAGScheduler: Registering RDD 3 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+25/04/28 13:52:12 INFO DAGScheduler: Got map stage job 0 (count at NativeMethodAccessorImpl.java:0) with 8 output partitions
+25/04/28 13:52:12 INFO DAGScheduler: Final stage: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0)
+25/04/28 13:52:12 INFO DAGScheduler: Parents of final stage: List()
+25/04/28 13:52:12 INFO DAGScheduler: Missing parents: List()
+25/04/28 13:52:12 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/04/28 13:52:12 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 14.3 KiB, free 434.2 MiB)
+25/04/28 13:52:12 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.1 KiB, free 434.1 MiB)
+25/04/28 13:52:12 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on node-master:43447 (size: 7.1 KiB, free: 434.4 MiB)
+25/04/28 13:52:12 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1535
+25/04/28 13:52:12 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/04/28 13:52:12 INFO YarnScheduler: Adding task set 0.0 with 8 tasks resource profile 0
+25/04/28 13:52:12 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 0) (node-worker1, executor 2, partition 3, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:13 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 1) (node-worker1, executor 2, partition 4, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:13 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on node-worker1:45119 (size: 7.1 KiB, free: 434.4 MiB)
+25/04/28 13:52:13 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on node-worker1:45119 (size: 35.4 KiB, free: 434.4 MiB)
+25/04/28 13:52:14 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 2) (node-worker1, executor 2, partition 5, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:14 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 3) (node-worker1, executor 2, partition 7, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:14 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 1) in 1780 ms on node-worker1 (executor 2) (1/8)
+25/04/28 13:52:14 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 0) in 1795 ms on node-worker1 (executor 2) (2/8)
+25/04/28 13:52:14 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 3) in 208 ms on node-worker1 (executor 2) (3/8)
+25/04/28 13:52:15 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 2) in 257 ms on node-worker1 (executor 2) (4/8)
+25/04/28 13:52:17 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 4) (node-worker1, executor 2, partition 2, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:17 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 5) (node-worker1, executor 2, partition 0, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:18 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (node-worker1, executor 2, partition 6, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:18 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 5) in 350 ms on node-worker1 (executor 2) (5/8)
+25/04/28 13:52:18 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 7) (node-worker1, executor 2, partition 1, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:18 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 4) in 358 ms on node-worker1 (executor 2) (6/8)
+25/04/28 13:52:18 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 239 ms on node-worker1 (executor 2) (7/8)
+25/04/28 13:52:18 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 7) in 307 ms on node-worker1 (executor 2) (8/8)
+25/04/28 13:52:18 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/04/28 13:52:18 INFO DAGScheduler: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0) finished in 5.561 s
+25/04/28 13:52:18 INFO DAGScheduler: looking for newly runnable stages
+25/04/28 13:52:18 INFO DAGScheduler: running: Set()
+25/04/28 13:52:18 INFO DAGScheduler: waiting: Set()
+25/04/28 13:52:18 INFO DAGScheduler: failed: Set()
+25/04/28 13:52:18 INFO CodeGenerator: Code generated in 11.921484 ms
+25/04/28 13:52:18 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/04/28 13:52:18 INFO DAGScheduler: Got job 1 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/04/28 13:52:18 INFO DAGScheduler: Final stage: ResultStage 2 (count at NativeMethodAccessorImpl.java:0)
+25/04/28 13:52:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+25/04/28 13:52:18 INFO DAGScheduler: Missing parents: List()
+25/04/28 13:52:18 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/04/28 13:52:18 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 12.1 KiB, free 434.1 MiB)
+25/04/28 13:52:18 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 434.1 MiB)
+25/04/28 13:52:18 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on node-master:43447 (size: 5.8 KiB, free: 434.4 MiB)
+25/04/28 13:52:18 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1535
+25/04/28 13:52:18 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/04/28 13:52:18 INFO YarnScheduler: Adding task set 2.0 with 1 tasks resource profile 0
+25/04/28 13:52:18 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 8) (node-worker1, executor 2, partition 0, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:18 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on node-worker1:45119 (size: 5.8 KiB, free: 434.4 MiB)
+25/04/28 13:52:18 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.3.34.106:39472
+25/04/28 13:52:18 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 8) in 161 ms on node-worker1 (executor 2) (1/1)
+25/04/28 13:52:18 INFO YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+25/04/28 13:52:18 INFO DAGScheduler: ResultStage 2 (count at NativeMethodAccessorImpl.java:0) finished in 0.172 s
+25/04/28 13:52:18 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+25/04/28 13:52:18 INFO YarnScheduler: Killing all running tasks in stage 2: Stage finished
+25/04/28 13:52:18 INFO DAGScheduler: Job 1 finished: count at NativeMethodAccessorImpl.java:0, took 0.183963 s
+25/04/28 13:52:18 INFO FileSourceStrategy: Pushed Filters: 
+25/04/28 13:52:18 INFO FileSourceStrategy: Post-Scan Filters: 
+25/04/28 13:52:18 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 201.0 KiB, free 433.9 MiB)
+25/04/28 13:52:18 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 433.9 MiB)
+25/04/28 13:52:18 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on node-master:43447 (size: 35.4 KiB, free: 434.3 MiB)
+25/04/28 13:52:18 INFO SparkContext: Created broadcast 3 from text at NativeMethodAccessorImpl.java:0
+25/04/28 13:52:18 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+25/04/28 13:52:18 INFO CodeGenerator: Code generated in 14.56291 ms
+25/04/28 13:52:18 INFO SparkContext: Starting job: text at NativeMethodAccessorImpl.java:0
+25/04/28 13:52:18 INFO DAGScheduler: Got job 2 (text at NativeMethodAccessorImpl.java:0) with 8 output partitions
+25/04/28 13:52:18 INFO DAGScheduler: Final stage: ResultStage 3 (text at NativeMethodAccessorImpl.java:0)
+25/04/28 13:52:18 INFO DAGScheduler: Parents of final stage: List()
+25/04/28 13:52:18 INFO DAGScheduler: Missing parents: List()
+25/04/28 13:52:18 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[11] at text at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/04/28 13:52:18 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 11.6 KiB, free 433.9 MiB)
+25/04/28 13:52:18 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 433.9 MiB)
+25/04/28 13:52:18 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on node-master:43447 (size: 5.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:18 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1535
+25/04/28 13:52:18 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 3 (MapPartitionsRDD[11] at text at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/04/28 13:52:18 INFO YarnScheduler: Adding task set 3.0 with 8 tasks resource profile 0
+25/04/28 13:52:18 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 9) (node-worker1, executor 2, partition 3, NODE_LOCAL, 7930 bytes) 
+25/04/28 13:52:18 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 10) (node-worker1, executor 2, partition 4, NODE_LOCAL, 7930 bytes) 
+25/04/28 13:52:18 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on node-worker1:45119 (size: 5.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:19 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on node-worker1:45119 (size: 35.4 KiB, free: 434.3 MiB)
+25/04/28 13:52:19 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 11) (node-worker1, executor 2, partition 5, NODE_LOCAL, 7930 bytes) 
+25/04/28 13:52:19 INFO TaskSetManager: Starting task 7.0 in stage 3.0 (TID 12) (node-worker1, executor 2, partition 7, NODE_LOCAL, 7930 bytes) 
+25/04/28 13:52:19 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 9) in 1006 ms on node-worker1 (executor 2) (1/8)
+25/04/28 13:52:19 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 10) in 1008 ms on node-worker1 (executor 2) (2/8)
+25/04/28 13:52:20 INFO TaskSetManager: Finished task 7.0 in stage 3.0 (TID 12) in 598 ms on node-worker1 (executor 2) (3/8)
+25/04/28 13:52:20 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 11) in 799 ms on node-worker1 (executor 2) (4/8)
+25/04/28 13:52:23 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 13) (node-worker1, executor 2, partition 2, RACK_LOCAL, 7930 bytes) 
+25/04/28 13:52:23 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 14) (node-worker1, executor 2, partition 0, RACK_LOCAL, 7930 bytes) 
+25/04/28 13:52:24 INFO TaskSetManager: Starting task 6.0 in stage 3.0 (TID 15) (node-worker1, executor 2, partition 6, RACK_LOCAL, 7930 bytes) 
+25/04/28 13:52:24 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 16) (node-worker1, executor 2, partition 1, RACK_LOCAL, 7930 bytes) 
+25/04/28 13:52:24 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 14) in 828 ms on node-worker1 (executor 2) (5/8)
+25/04/28 13:52:24 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 13) in 829 ms on node-worker1 (executor 2) (6/8)
+25/04/28 13:52:25 INFO TaskSetManager: Finished task 6.0 in stage 3.0 (TID 15) in 574 ms on node-worker1 (executor 2) (7/8)
+25/04/28 13:52:25 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 16) in 784 ms on node-worker1 (executor 2) (8/8)
+25/04/28 13:52:25 INFO YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+25/04/28 13:52:25 INFO DAGScheduler: ResultStage 3 (text at NativeMethodAccessorImpl.java:0) finished in 6.501 s
+25/04/28 13:52:25 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+25/04/28 13:52:25 INFO YarnScheduler: Killing all running tasks in stage 3: Stage finished
+25/04/28 13:52:25 INFO DAGScheduler: Job 2 finished: text at NativeMethodAccessorImpl.java:0, took 6.505990 s
+25/04/28 13:52:25 INFO DAGScheduler: Registering RDD 12 (text at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+25/04/28 13:52:25 INFO DAGScheduler: Got map stage job 3 (text at NativeMethodAccessorImpl.java:0) with 8 output partitions
+25/04/28 13:52:25 INFO DAGScheduler: Final stage: ShuffleMapStage 4 (text at NativeMethodAccessorImpl.java:0)
+25/04/28 13:52:25 INFO DAGScheduler: Parents of final stage: List()
+25/04/28 13:52:25 INFO DAGScheduler: Missing parents: List()
+25/04/28 13:52:25 INFO DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[12] at text at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/04/28 13:52:25 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 23.1 KiB, free 433.9 MiB)
+25/04/28 13:52:25 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 9.9 KiB, free 433.9 MiB)
+25/04/28 13:52:25 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on node-master:43447 (size: 9.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:25 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1535
+25/04/28 13:52:25 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[12] at text at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/04/28 13:52:25 INFO YarnScheduler: Adding task set 4.0 with 8 tasks resource profile 0
+25/04/28 13:52:25 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 17) (node-worker1, executor 2, partition 3, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:25 INFO TaskSetManager: Starting task 4.0 in stage 4.0 (TID 18) (node-worker1, executor 2, partition 4, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:25 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on node-worker1:45119 (size: 9.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:26 INFO TaskSetManager: Starting task 5.0 in stage 4.0 (TID 19) (node-worker1, executor 2, partition 5, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:26 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 17) in 1479 ms on node-worker1 (executor 2) (1/8)
+25/04/28 13:52:26 INFO TaskSetManager: Starting task 7.0 in stage 4.0 (TID 20) (node-worker1, executor 2, partition 7, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:26 INFO TaskSetManager: Finished task 4.0 in stage 4.0 (TID 18) in 1480 ms on node-worker1 (executor 2) (2/8)
+25/04/28 13:52:28 INFO TaskSetManager: Finished task 7.0 in stage 4.0 (TID 20) in 1016 ms on node-worker1 (executor 2) (3/8)
+25/04/28 13:52:28 INFO TaskSetManager: Finished task 5.0 in stage 4.0 (TID 19) in 1371 ms on node-worker1 (executor 2) (4/8)
+25/04/28 13:52:30 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 21) (node-worker1, executor 2, partition 2, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:30 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 22) (node-worker1, executor 2, partition 0, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:32 INFO TaskSetManager: Starting task 6.0 in stage 4.0 (TID 23) (node-worker1, executor 2, partition 6, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:32 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 21) in 1389 ms on node-worker1 (executor 2) (5/8)
+25/04/28 13:52:32 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 24) (node-worker1, executor 2, partition 1, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:32 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 22) in 1391 ms on node-worker1 (executor 2) (6/8)
+25/04/28 13:52:33 INFO TaskSetManager: Finished task 6.0 in stage 4.0 (TID 23) in 1045 ms on node-worker1 (executor 2) (7/8)
+25/04/28 13:52:33 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 24) in 1418 ms on node-worker1 (executor 2) (8/8)
+25/04/28 13:52:33 INFO DAGScheduler: ShuffleMapStage 4 (text at NativeMethodAccessorImpl.java:0) finished in 8.104 s
+25/04/28 13:52:33 INFO DAGScheduler: looking for newly runnable stages
+25/04/28 13:52:33 INFO DAGScheduler: running: Set()
+25/04/28 13:52:33 INFO DAGScheduler: waiting: Set()
+25/04/28 13:52:33 INFO DAGScheduler: failed: Set()
+25/04/28 13:52:33 INFO YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+25/04/28 13:52:33 INFO ShufflePartitionsUtil: For shuffle(1), advisory target size: 67108864, actual target size 67108864, minimum partition size: 1048576
+25/04/28 13:52:33 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+25/04/28 13:52:33 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+25/04/28 13:52:33 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+25/04/28 13:52:33 INFO CodeGenerator: Code generated in 11.89762 ms
+25/04/28 13:52:33 INFO SparkContext: Starting job: text at NativeMethodAccessorImpl.java:0
+25/04/28 13:52:33 INFO DAGScheduler: Got job 4 (text at NativeMethodAccessorImpl.java:0) with 10 output partitions
+25/04/28 13:52:33 INFO DAGScheduler: Final stage: ResultStage 6 (text at NativeMethodAccessorImpl.java:0)
+25/04/28 13:52:33 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+25/04/28 13:52:33 INFO DAGScheduler: Missing parents: List()
+25/04/28 13:52:33 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[15] at text at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/04/28 13:52:33 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 229.5 KiB, free 433.6 MiB)
+25/04/28 13:52:33 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 85.4 KiB, free 433.5 MiB)
+25/04/28 13:52:33 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on node-master:43447 (size: 85.4 KiB, free: 434.2 MiB)
+25/04/28 13:52:33 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1535
+25/04/28 13:52:33 INFO DAGScheduler: Submitting 10 missing tasks from ResultStage 6 (MapPartitionsRDD[15] at text at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+25/04/28 13:52:33 INFO YarnScheduler: Adding task set 6.0 with 10 tasks resource profile 0
+25/04/28 13:52:33 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 25) (node-worker1, executor 2, partition 0, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:33 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 26) (node-worker1, executor 2, partition 1, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:33 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on node-worker1:45119 (size: 85.4 KiB, free: 434.2 MiB)
+25/04/28 13:52:33 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.3.34.106:39472
+25/04/28 13:52:35 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 27) (node-worker1, executor 2, partition 2, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:35 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 26) in 1607 ms on node-worker1 (executor 2) (1/10)
+25/04/28 13:52:35 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 28) (node-worker1, executor 2, partition 3, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:35 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 25) in 2142 ms on node-worker1 (executor 2) (2/10)
+25/04/28 13:52:36 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 29) (node-worker1, executor 2, partition 4, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:36 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 27) in 1283 ms on node-worker1 (executor 2) (3/10)
+25/04/28 13:52:37 INFO TaskSetManager: Starting task 5.0 in stage 6.0 (TID 30) (node-worker1, executor 2, partition 5, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:37 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 28) in 1241 ms on node-worker1 (executor 2) (4/10)
+25/04/28 13:52:38 INFO TaskSetManager: Starting task 6.0 in stage 6.0 (TID 31) (node-worker1, executor 2, partition 6, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:38 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 29) in 1698 ms on node-worker1 (executor 2) (5/10)
+25/04/28 13:52:38 INFO TaskSetManager: Starting task 7.0 in stage 6.0 (TID 32) (node-worker1, executor 2, partition 7, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:38 INFO TaskSetManager: Finished task 5.0 in stage 6.0 (TID 30) in 1668 ms on node-worker1 (executor 2) (6/10)
+25/04/28 13:52:40 INFO TaskSetManager: Starting task 8.0 in stage 6.0 (TID 33) (node-worker1, executor 2, partition 8, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:40 INFO TaskSetManager: Finished task 6.0 in stage 6.0 (TID 31) in 1704 ms on node-worker1 (executor 2) (7/10)
+25/04/28 13:52:40 INFO TaskSetManager: Starting task 9.0 in stage 6.0 (TID 34) (node-worker1, executor 2, partition 9, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:40 INFO TaskSetManager: Finished task 7.0 in stage 6.0 (TID 32) in 1749 ms on node-worker1 (executor 2) (8/10)
+25/04/28 13:52:40 INFO TaskSetManager: Finished task 9.0 in stage 6.0 (TID 34) in 111 ms on node-worker1 (executor 2) (9/10)
+25/04/28 13:52:41 INFO TaskSetManager: Finished task 8.0 in stage 6.0 (TID 33) in 1283 ms on node-worker1 (executor 2) (10/10)
+25/04/28 13:52:41 INFO YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+25/04/28 13:52:41 INFO DAGScheduler: ResultStage 6 (text at NativeMethodAccessorImpl.java:0) finished in 7.602 s
+25/04/28 13:52:41 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+25/04/28 13:52:41 INFO YarnScheduler: Killing all running tasks in stage 6: Stage finished
+25/04/28 13:52:41 INFO DAGScheduler: Job 4 finished: text at NativeMethodAccessorImpl.java:0, took 7.614862 s
+25/04/28 13:52:41 INFO FileFormatWriter: Start to commit write Job 5c6811e0-bfff-4b6e-88c2-7f1baefdf6e7.
+25/04/28 13:52:41 INFO FileFormatWriter: Write Job 5c6811e0-bfff-4b6e-88c2-7f1baefdf6e7 committed. Elapsed time: 62 ms.
+25/04/28 13:52:41 INFO FileFormatWriter: Finished processing stats for write job 5c6811e0-bfff-4b6e-88c2-7f1baefdf6e7.
+25/04/28 13:52:41 INFO FileSourceStrategy: Pushed Filters: 
+25/04/28 13:52:41 INFO FileSourceStrategy: Post-Scan Filters: 
+25/04/28 13:52:41 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 201.0 KiB, free 433.3 MiB)
+25/04/28 13:52:41 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 433.3 MiB)
+25/04/28 13:52:41 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on node-master:43447 (size: 35.4 KiB, free: 434.2 MiB)
+25/04/28 13:52:41 INFO SparkContext: Created broadcast 7 from count at NativeMethodAccessorImpl.java:0
+25/04/28 13:52:41 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+25/04/28 13:52:41 INFO DAGScheduler: Registering RDD 19 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+25/04/28 13:52:41 INFO DAGScheduler: Got map stage job 5 (count at NativeMethodAccessorImpl.java:0) with 8 output partitions
+25/04/28 13:52:41 INFO DAGScheduler: Final stage: ShuffleMapStage 7 (count at NativeMethodAccessorImpl.java:0)
+25/04/28 13:52:41 INFO DAGScheduler: Parents of final stage: List()
+25/04/28 13:52:41 INFO DAGScheduler: Missing parents: List()
+25/04/28 13:52:41 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[19] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/04/28 13:52:41 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 14.3 KiB, free 433.3 MiB)
+25/04/28 13:52:41 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 7.1 KiB, free 433.3 MiB)
+25/04/28 13:52:41 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on node-master:43447 (size: 7.1 KiB, free: 434.2 MiB)
+25/04/28 13:52:41 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1535
+25/04/28 13:52:41 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[19] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/04/28 13:52:41 INFO YarnScheduler: Adding task set 7.0 with 8 tasks resource profile 0
+25/04/28 13:52:41 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 35) (node-worker1, executor 2, partition 3, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:41 INFO TaskSetManager: Starting task 4.0 in stage 7.0 (TID 36) (node-worker1, executor 2, partition 4, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:41 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on node-worker1:45119 (size: 7.1 KiB, free: 434.2 MiB)
+25/04/28 13:52:41 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on node-worker1:45119 (size: 35.4 KiB, free: 434.2 MiB)
+25/04/28 13:52:41 INFO TaskSetManager: Starting task 5.0 in stage 7.0 (TID 37) (node-worker1, executor 2, partition 5, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:41 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 35) in 263 ms on node-worker1 (executor 2) (1/8)
+25/04/28 13:52:41 INFO TaskSetManager: Starting task 7.0 in stage 7.0 (TID 38) (node-worker1, executor 2, partition 7, NODE_LOCAL, 7919 bytes) 
+25/04/28 13:52:41 INFO TaskSetManager: Finished task 4.0 in stage 7.0 (TID 36) in 269 ms on node-worker1 (executor 2) (2/8)
+25/04/28 13:52:41 INFO TaskSetManager: Finished task 7.0 in stage 7.0 (TID 38) in 190 ms on node-worker1 (executor 2) (3/8)
+25/04/28 13:52:41 INFO TaskSetManager: Finished task 5.0 in stage 7.0 (TID 37) in 265 ms on node-worker1 (executor 2) (4/8)
+25/04/28 13:52:44 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 39) (node-worker1, executor 2, partition 2, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:44 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 40) (node-worker1, executor 2, partition 0, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:45 INFO TaskSetManager: Starting task 6.0 in stage 7.0 (TID 41) (node-worker1, executor 2, partition 6, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:45 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 40) in 309 ms on node-worker1 (executor 2) (5/8)
+25/04/28 13:52:45 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 42) (node-worker1, executor 2, partition 1, RACK_LOCAL, 7919 bytes) 
+25/04/28 13:52:45 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 39) in 381 ms on node-worker1 (executor 2) (6/8)
+25/04/28 13:52:45 INFO TaskSetManager: Finished task 6.0 in stage 7.0 (TID 41) in 216 ms on node-worker1 (executor 2) (7/8)
+25/04/28 13:52:45 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 42) in 314 ms on node-worker1 (executor 2) (8/8)
+25/04/28 13:52:45 INFO YarnScheduler: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+25/04/28 13:52:45 INFO DAGScheduler: ShuffleMapStage 7 (count at NativeMethodAccessorImpl.java:0) finished in 4.044 s
+25/04/28 13:52:45 INFO DAGScheduler: looking for newly runnable stages
+25/04/28 13:52:45 INFO DAGScheduler: running: Set()
+25/04/28 13:52:45 INFO DAGScheduler: waiting: Set()
+25/04/28 13:52:45 INFO DAGScheduler: failed: Set()
+25/04/28 13:52:45 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/04/28 13:52:45 INFO DAGScheduler: Got job 6 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/04/28 13:52:45 INFO DAGScheduler: Final stage: ResultStage 9 (count at NativeMethodAccessorImpl.java:0)
+25/04/28 13:52:45 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+25/04/28 13:52:45 INFO DAGScheduler: Missing parents: List()
+25/04/28 13:52:45 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[22] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/04/28 13:52:45 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 12.1 KiB, free 433.3 MiB)
+25/04/28 13:52:45 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 433.3 MiB)
+25/04/28 13:52:45 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on node-master:43447 (size: 5.8 KiB, free: 434.2 MiB)
+25/04/28 13:52:45 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1535
+25/04/28 13:52:45 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[22] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/04/28 13:52:45 INFO YarnScheduler: Adding task set 9.0 with 1 tasks resource profile 0
+25/04/28 13:52:45 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 43) (node-worker1, executor 2, partition 0, NODE_LOCAL, 7374 bytes) 
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_6_piece0 on node-master:43447 in memory (size: 85.4 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_6_piece0 on node-worker1:45119 in memory (size: 85.4 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on node-worker1:45119 (size: 5.8 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.3.34.106:39472
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_8_piece0 on node-master:43447 in memory (size: 7.1 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_8_piece0 on node-worker1:45119 in memory (size: 7.1 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 43) in 25 ms on node-worker1 (executor 2) (1/1)
+25/04/28 13:52:45 INFO YarnScheduler: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+25/04/28 13:52:45 INFO DAGScheduler: ResultStage 9 (count at NativeMethodAccessorImpl.java:0) finished in 0.040 s
+25/04/28 13:52:45 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_3_piece0 on node-master:43447 in memory (size: 35.4 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO YarnScheduler: Killing all running tasks in stage 9: Stage finished
+25/04/28 13:52:45 INFO DAGScheduler: Job 6 finished: count at NativeMethodAccessorImpl.java:0, took 0.044739 s
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_3_piece0 on node-worker1:45119 in memory (size: 35.4 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO SparkContext: SparkContext is stopping with exitCode 0.
+========== Spark TeraSort Benchmark ==========
+Number of Workers: 3
+Wall Time: 35.65 seconds
+Input Rows: 781481
+Output Rows: 781481
+Estimated Input Size: 74.53 MB
+Estimated Output Size: 74.53 MB
+Shuffle Throughput: 4.18 MB/s
+Aggregate Resource Utilization: 106940.60 vcore-ms (approx)
+Memory Utilization per Worker: 1024.00 MB
+HDFS I/O Throughput per Worker: 1.39 MB/s
+CPU Efficiency: N/A
+Killed Tasks per Worker: N/A
+==============================================
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_5_piece0 on node-master:43447 in memory (size: 9.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_5_piece0 on node-worker1:45119 in memory (size: 9.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_4_piece0 on node-master:43447 in memory (size: 5.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO SparkUI: Stopped Spark web UI at http://node-master:4040
+25/04/28 13:52:45 INFO BlockManagerInfo: Removed broadcast_4_piece0 on node-worker1:45119 in memory (size: 5.9 KiB, free: 434.3 MiB)
+25/04/28 13:52:45 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+25/04/28 13:52:45 INFO YarnClientSchedulerBackend: Shutting down all executors
+25/04/28 13:52:45 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+25/04/28 13:52:45 INFO YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+25/04/28 13:52:45 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/04/28 13:52:45 INFO MemoryStore: MemoryStore cleared
+25/04/28 13:52:45 INFO BlockManager: BlockManager stopped
+25/04/28 13:52:45 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/04/28 13:52:45 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/04/28 13:52:45 INFO SparkContext: Successfully stopped SparkContext
+25/04/28 13:52:45 INFO ShutdownHookManager: Shutdown hook called
+25/04/28 13:52:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-01ae64eb-c364-4fec-b5e5-980d386ba449
+25/04/28 13:52:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-3c0c10e4-383b-4fa9-bdbc-5cdd7006c548/pyspark-8d2362cf-29f5-47d5-9199-90273c1b5023
+25/04/28 13:52:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-3c0c10e4-383b-4fa9-bdbc-5cdd7006c548
+
+
+
